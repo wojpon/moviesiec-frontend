@@ -24,6 +24,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "src/moviesiec-theme.scss"
+              },
               "src/styles.css"
             ],
             "scripts": []

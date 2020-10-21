@@ -1,0 +1,10 @@
+.spacer-1 {
+  flex: 1 1 auto;
+}
+.spacer-2 {
+  padding-right: 10px;
+}
+.name-button {
+  font-size: 25px;
+}
+

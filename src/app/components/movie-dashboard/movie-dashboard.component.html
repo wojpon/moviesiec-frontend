@@ -1,0 +1,10 @@
+<div *ngIf="movie">
+  <div>{{ movie.title }}</div>
+  <div>Director: {{ movie.director }}</div>
+  <div>Year of production: {{ movie.year }}</div>
+  <div>Rating {{movie.rating}} based on {{movie.ratings}} revievs</div>
+</div>
+
+<button [routerLink]="['/movies']" mat-icon-button>
+  <mat-icon>keyboard_backspace</mat-icon>
+</button>
