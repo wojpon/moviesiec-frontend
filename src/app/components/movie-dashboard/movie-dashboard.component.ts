@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/core/http/http.service';
 import { MovieModel } from '../../core/data-model/movie/movie-model';
 
@@ -11,7 +11,8 @@ import { MovieModel } from '../../core/data-model/movie/movie-model';
 export class MovieDashboardComponent implements OnInit {
   constructor(
     private httpService: HttpService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   moviesUrl = 'http://localhost:8080/movies/';
@@ -20,8 +21,12 @@ export class MovieDashboardComponent implements OnInit {
 
   ngOnInit() {
     const stringID = this.route.snapshot.paramMap.get('stringid');
-    this.httpService
-      .getMovie(this.moviesUrl, stringID)
-      .subscribe((data: MovieModel) => (this.movie = data));
+    // this.httpService
+    //   .getMovie(this.moviesUrl, stringID)
+    //   .subscribe((data: MovieModel) => (this.movie = data));
+  }
+
+  onBack():void {
+    this.router.navigate(['/movies'])
   }
 }

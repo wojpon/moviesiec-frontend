@@ -1,7 +1,6 @@
-html,
 body {
-    height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-body {
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+.mat-button-focus-overlay {
+    background-color:transparent;
 }

@@ -5,6 +5,6 @@
   <div>Rating {{movie.rating}} based on {{movie.ratings}} revievs</div>
 </div>
 
-<button [routerLink]="['/movies']" mat-icon-button>
+<button (click)='onBack()' mat-icon-button>
   <mat-icon>keyboard_backspace</mat-icon>
 </button>

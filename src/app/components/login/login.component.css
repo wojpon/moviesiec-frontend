@@ -1,0 +1,14 @@
+.login-container {
+  margin-top: 100px;
+  text-align: center;
+  border: 5px sold rgb(218, 173, 26);
+  font-size: 14px;
+}
+
+.login {
+  margin: 10px;
+  width: 220px;
+}
+.password {
+  width: 220px;
+}

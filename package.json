@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.1.12",
     "@angular/router": "~9.1.12",
     "ng-mat-search-bar": "^10.0.0-beta.3",
-    "rxjs": "~6.5.4",
+    "rxjs": "^6.6.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

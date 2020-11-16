@@ -1,5 +1,3 @@
-<div *ngFor="let movie of movies">
-  <button mat-button [routerLink]="['/movie', movie.stringid]">{{ movie.title }}</button>
-  <div class="director">Director: {{ movie.director }}</div>
-  <div class="year">Year of production: {{ movie.year }}</div>
+<div *ngIf='movies$ | async as movies'>
+  <app-movie-table [movies]="movies" (pageIndex)="setPageIndex($event)"></app-movie-table>
 </div>
