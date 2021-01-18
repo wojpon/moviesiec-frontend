@@ -1,8 +1,5 @@
-export class MovieModel {
-  stringid: string;
+export interface MovieModel {
+  id: number;
   title: string;
-  year: number;
-  director: string;
-  rating: number;
-  ratings: number;
+  rank: string;
 }

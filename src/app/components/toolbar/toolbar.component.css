@@ -1,10 +1,23 @@
-.spacer-1 {
-  flex: 1 1 auto;
-}
-.spacer-2 {
-  padding-right: 10px;
-}
-.name-button {
-  font-size: 22px;
+mat-toolbar {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: max-content min-content auto min-content min-content min-content;
 }
 
+.site-icon {
+  grid-column: 1;
+}
+.site-logo {
+  grid-column: 2;
+}
+mat-search-bar {
+  grid-column: 4;
+}
+.movie-list-icon {
+  grid-column: 5;
+}
+.login-icon {
+  grid-column: 6;
+}

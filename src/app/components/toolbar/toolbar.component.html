@@ -1,17 +1,15 @@
 <mat-toolbar color="primary">
-  <button [routerLink]="['/homepage']" mat-icon-button>
+  <button class="site-icon" [routerLink]="['/homepage']" mat-icon-button>
     <mat-icon>movie</mat-icon>
   </button>
-  <button [routerLink]="['/homepage']" class="name-button" mat-button>
+  <button class="site-logo" [routerLink]="['/homepage']" mat-button>
     MOVIESIEC
   </button>
-  <span class="spacer-1"></span>
   <mat-search-bar></mat-search-bar>
-  <span class="spacer-2"></span>
-  <button [routerLink]="['/movies']" mat-icon-button>
+  <button class="movie-list-icon" [routerLink]="['/movies']" mat-icon-button>
     <mat-icon>list</mat-icon>
   </button>
-  <button [routerLink]="['/login']" mat-icon-button>
+  <button class="login-icon" [routerLink]="['/login']" mat-icon-button>
     <mat-icon>login</mat-icon>
   </button>
 </mat-toolbar>

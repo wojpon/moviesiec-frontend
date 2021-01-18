@@ -1,5 +1,21 @@
-p{
-    font-size: 30px;
-    text-align: center;
-    margin: 75px;
+main { 
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+}
+
+.app-secondary-toolbar{
+    grid-row: 1;
+}
+
+.app-movie-of-the-day {
+    grid-row: 2;
+}
+
+.app-event-of-the-day{
+    grid-row: 3;
+}
+
+.app-news-panel{
+    grid-row: 4;
 }

@@ -1,0 +1,31 @@
+.header-container {
+  height: 60px;
+  display: grid;
+}
+
+.header {
+  margin: auto;
+  font-size: 36px;
+  font-weight: bold;
+}
+.container {
+  height: 450px;
+  display: grid;
+  background: transparent url(/assets/images/clockwork-orange.jpg) 50% 10%
+    no-repeat padding-box;
+}
+
+.text-container {
+  margin: 300px;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 36px;
+}
+.subtitle {
+  font-size: 22px;
+  font-weight: lighter;
+}

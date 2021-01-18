@@ -1,0 +1,12 @@
+.container {
+  height: 250px;
+  display: grid;
+  background: url(/assets/images/being-john-malkovich.jpg);
+  color: white;
+}
+.title {
+  margin: 50px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+}

@@ -1,15 +1,9 @@
-import {
-  AfterViewInit,
-  Component,
-  OnChanges,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/core/http/http.service';
 import { MovieModel } from '../../core/data-model/movie/movie-model';
-import { MatTableDataSource } from '@angular/material/table';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
+import { ServerResponse } from 'src/app/core/data-model/response/server-response';
 
 @Component({
   selector: 'app-movie-list',
@@ -17,15 +11,46 @@ import { BehaviorSubject, Observable } from 'rxjs';
   styleUrls: ['./movie-list.component.css'],
 })
 export class MovieListComponent implements OnInit {
-  pageIndex: number;
-  movies$ = this.httpService.getMovies('1');
+  pageIndex = 1;
+  currentIndex = -1; 
+  totalItems = 100;
+
+  pageSize = 5;
+  pageSizes = [5, 10, 15];
+  displayedColumns: string[] = ['id', 'title', 'rank'];
+  movies$: Observable<MovieModel[]>;
 
   constructor(private httpService: HttpService) {}
-
-  ngOnInit(): void {}
-
-  setPageIndex(pageIndex: number) {
-    this.pageIndex = pageIndex + 1;
-    console.log(this.pageIndex);
+  ngOnInit(): void {
+   this.getData();
   }
+
+  getData(): void {
+    this.movies$ = this.httpService.getMovies(String(this.pageIndex), String(this.pageSize));
+  }
+
+  handlePageChange(event): void {
+    this.pageIndex = event;
+    this.getData();
+    console.log(event);
+  }
+
+  handlePageSizeChange(event): void {
+    this.pageSize = event.target.value;
+    this.pageIndex = 1;
+    this.getData();
+  }
+
+  // retrieveMovies(): void {
+  //   this.httpService.getMovies(String(this.pageIndex)).subscribe((data) => {
+  //     this.totalItems = data.totalItems;
+  //     this.movies = data.movies;
+  //     console.log(data);
+  //   });
+  // }
+
+  // handlePageChange(change: number) {
+  //   this.pageIndex = change;
+  //   // this.retrieveMovies();
+  // }
 }

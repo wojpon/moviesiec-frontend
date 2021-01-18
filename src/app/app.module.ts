@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,9 +11,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MovieDashboardComponent } from './components/movie-dashboard/movie-dashboard.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { MovieTableComponent } from './components/movie-table/movie-table.component';
+import { FormsModule } from '@angular/forms';
+import { MovieOfTheDayComponent } from './components/movie-of-the-day/movie-of-the-day.component';
+import { SecondaryToolbarComponent } from './components/secondary-toolbar/secondary-toolbar.component';
+import { EventOfTheDayComponent } from './components/event-of-the-day/event-of-the-day.component';
+import { NewsPanelComponent } from './components/news-panel/news-panel.component';
 
 
 @NgModule({
@@ -20,18 +26,25 @@ import { MovieTableComponent } from './components/movie-table/movie-table.compon
     AppComponent,
     ToolbarComponent,
     LoginComponent,
-    MovieListComponent,
-    MovieDashboardComponent,
-    HomepageComponent,
     MovieTableComponent,
+    MovieListComponent,
+    HomepageComponent,
+    MovieOfTheDayComponent,
+    SecondaryToolbarComponent,
+    EventOfTheDayComponent,
+    NewsPanelComponent,
+
   ],
   imports: [
+    CommonModule,
     BrowserModule,
+    FormsModule,
     MaterialModule,
     BrowserAnimationsModule,
     NgMatSearchBarModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

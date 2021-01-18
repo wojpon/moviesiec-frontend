@@ -1,6 +1,17 @@
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+header {
+  max-width: 100%;
+  background: #ffd603;
+}
+
+main {
+  max-width: 1400px;
+  margin: auto;
+}
+footer {
+}
 .mat-button-focus-overlay {
-    background-color:transparent;
+  background-color: transparent;
 }
