@@ -21,12 +21,3 @@
 .mubi {
   grid-column: 6;
 }
-
-.line {
-  display:block;
-  border:none;
-  color:white;
-  height: 1px;
-  background:black;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 700, from(rgb(85, 83, 83)), to(rgb(214, 213, 213)));
-}

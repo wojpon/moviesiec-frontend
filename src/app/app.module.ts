@@ -19,6 +19,9 @@ import { MovieOfTheDayComponent } from './components/movie-of-the-day/movie-of-t
 import { SecondaryToolbarComponent } from './components/secondary-toolbar/secondary-toolbar.component';
 import { EventOfTheDayComponent } from './components/event-of-the-day/event-of-the-day.component';
 import { NewsPanelComponent } from './components/news-panel/news-panel.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
+import { YourWatchlistComponent } from './components/your-watchlist/your-watchlist.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -33,6 +36,9 @@ import { NewsPanelComponent } from './components/news-panel/news-panel.component
     SecondaryToolbarComponent,
     EventOfTheDayComponent,
     NewsPanelComponent,
+    ReviewsComponent,
+    YourWatchlistComponent,
+    FooterComponent,
 
   ],
   imports: [
